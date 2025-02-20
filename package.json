@@ -26,7 +26,7 @@
     "test:watch": "vitest",
     "test:ci": "vitest run --coverage",
     "serve": "vite preview",
-    "prepare": "husky install && rm -rf .git/hooks && ln -s ../.husky .git/hooks",
+    "prepare": "husky && rm -rf .git/hooks && ln -s ../.husky .git/hooks",
     "lint": "eslint --cache --fix ."
   },
   "dependencies": {
@@ -37,9 +37,9 @@
     "react-router-dom": "^6.22.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.3",
-    "@commitlint/config-conventional": "^19.0.3",
-    "@commitlint/prompt-cli": "^19.0.3",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@commitlint/prompt-cli": "^19.7.1",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^18.19.20",
@@ -55,10 +55,10 @@
     "eslint-plugin-testing-library": "^6.2.0",
     "eslint-plugin-unused-imports": "^3.1.0",
     "happy-dom": "^13.6.2",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
     "typescript": "^5.0.4",
     "vite": "^4.3.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.34.1"
   }
