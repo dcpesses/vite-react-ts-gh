@@ -102,6 +102,7 @@ exports[`Demo > Should render as expected 1`] = `
                   class="item-checkbox"
                 >
                   <input
+                    checked=""
                     title="Mark Incomplete"
                     type="checkbox"
                   />

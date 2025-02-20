@@ -1,6 +1,6 @@
 {
   "name": "vite-react-ts-gh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React + Redux + TypeScript + Vite + Github Actions starter template",
   "repository": {
     "type": "git",
@@ -57,7 +57,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-testing-library": "^6.2.0",
     "eslint-plugin-unused-imports": "^3.1.0",
-    "happy-dom": "15.10.2",
+    "happy-dom": "^17.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "typescript": "^5.4.4",
