@@ -30,6 +30,7 @@ exports[`App > Should render as expected 1`] = `
       >
         <a
           class="App-link"
+          data-discover="true"
           href="/demo"
         >
           View Demos
