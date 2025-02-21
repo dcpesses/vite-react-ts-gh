@@ -21,11 +21,12 @@ export default defineConfig({
       '**/dist/**',
       '**/coverage/**',
       '**/.{idea,git,cache,output,temp,tmp}/**',
-      '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build}.config.*'
+      '**/{commitlint,lint-staged,karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build}.config.*'
     ],
     environment: 'happy-dom',
-    setupFiles: './tests/setupTests.ts',
+    setupFiles: 'tests/setupTests.ts',
     coverage: {
+      all: false,
       enabled: true,
       provider: 'v8',
       reporter: ['html', 'lcovonly', 'text', 'text-summary'],
