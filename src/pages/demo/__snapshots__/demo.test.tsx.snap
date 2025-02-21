@@ -13,6 +13,7 @@ exports[`Demo > Should render as expected 1`] = `
       >
         <a
           class="Demo-link"
+          data-discover="true"
           href="/"
         >
           ← Home

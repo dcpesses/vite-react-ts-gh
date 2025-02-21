@@ -12,13 +12,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter
-        basename="/vite-react-ts-gh"
-        future={{
-          v7_relativeSplatPath: true,
-          v7_startTransition: true,
-        }}
-      >
+      <BrowserRouter basename="/vite-react-ts-gh">
         <App />
       </BrowserRouter>
     </Provider>

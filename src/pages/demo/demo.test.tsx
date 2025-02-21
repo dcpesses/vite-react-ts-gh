@@ -9,10 +9,7 @@ describe('Demo', () => {
   test('Should render as expected', () => {
     const {container} = render(
       <Provider store={store}>
-        <BrowserRouter future={{
-          v7_relativeSplatPath: true,
-          v7_startTransition: true,
-        }}>
+        <BrowserRouter>
           <Demo />
         </BrowserRouter>
       </Provider>
@@ -23,10 +20,7 @@ describe('Demo', () => {
   test('Should render with Home link', () => {
     render(
       <Provider store={store}>
-        <BrowserRouter future={{
-          v7_relativeSplatPath: true,
-          v7_startTransition: true,
-        }}>
+        <BrowserRouter>
           <Demo />
         </BrowserRouter>
       </Provider>
