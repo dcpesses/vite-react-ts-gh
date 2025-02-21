@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import {HashRouter} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {store} from '@/app/store';
 
@@ -9,9 +9,12 @@ describe('Demo', () => {
   test('Should render as expected', () => {
     const {container} = render(
       <Provider store={store}>
-        <HashRouter>
+        <BrowserRouter future={{
+          v7_relativeSplatPath: true,
+          v7_startTransition: true,
+        }}>
           <Demo />
-        </HashRouter>
+        </BrowserRouter>
       </Provider>
     );
 
@@ -20,9 +23,12 @@ describe('Demo', () => {
   test('Should render with Home link', () => {
     render(
       <Provider store={store}>
-        <HashRouter>
+        <BrowserRouter future={{
+          v7_relativeSplatPath: true,
+          v7_startTransition: true,
+        }}>
           <Demo />
-        </HashRouter>
+        </BrowserRouter>
       </Provider>
     );
 

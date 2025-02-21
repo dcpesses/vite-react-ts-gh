@@ -30,7 +30,7 @@ exports[`App > Should render as expected 1`] = `
       >
         <a
           class="App-link"
-          href="#/demo"
+          href="/demo"
         >
           View Demos
         </a>

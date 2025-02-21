@@ -13,7 +13,7 @@ exports[`Demo > Should render as expected 1`] = `
       >
         <a
           class="Demo-link"
-          href="#/"
+          href="/"
         >
           ← Home
         </a>
