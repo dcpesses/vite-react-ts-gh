@@ -1,5 +1,6 @@
 import { Link, Routes, Route } from 'react-router-dom';
 import Demo from '@/pages/demo';
+import NotFound from '@/pages/not-found';
 import logo from '@/assets/logo.svg';
 
 import '@/App.css';
@@ -53,6 +54,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/demo" element={<Demo />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

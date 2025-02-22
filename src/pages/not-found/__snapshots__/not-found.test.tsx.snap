@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NotFound > Should render as expected 1`] = `
+<div>
+  <div
+    class="not-found"
+  >
+    <main
+      class="wrapper"
+    >
+      <h1>
+        404
+      </h1>
+      <p>
+        Sorry, this page does not exist.
+      </p>
+      <div>
+        <div
+          class="NotFound-link"
+          data-to="/"
+        >
+          ← Go Home
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
