@@ -1,13 +1,16 @@
 <div align="center">
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dcpesses/vite-react-ts-gh/blob/main/license)
-[![ci](https://github.com/dcpesses/vite-react-ts-gh/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dcpesses/vite-react-ts-gh/actions)
-[![codecov.io](https://codecov.io/gh/dcpesses/vite-react-ts-gh/coverage.svg?branch=main)](https://codecov.io/gh/dcpesses/vite-react-ts-gh?branch=master)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dcpesses/vite-react-ts-gh/blob/main/license)
+[![Build Status](https://github.com/dcpesses/vite-react-ts-gh/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dcpesses/vite-react-ts-gh/actions)
+[![Codecov](https://codecov.io/gh/dcpesses/vite-react-ts-gh/coverage.svg?branch=main)](https://codecov.io/gh/dcpesses/vite-react-ts-gh?branch=main)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=renovate)](https://renovatebot.com/)
+
+
 
 <!-- # React - TypeScript and GitHub Actions Template with Vite -->
 # Vite, React, Redux and GitHub Actions
 
-This a React 18 + Redux Toolkit + TypeScript + Vitest and React Testing Library + GitHub Actions starter template built with Vite.
+This is a React 19 + Redux Toolkit + TypeScript + Vitest and React Testing Library + GitHub Actions starter template built with Vite.
 
 [Demo](https://dcpesses.github.io/vite-react-ts-gh/)
 
@@ -21,14 +24,15 @@ Based on [pchmn/vite-react-ts-ghactions-template](https://github.com/pchmn/vite-
 
 Designed as a nifty React/Vite starter template with the following furnishings:
 
-- Single page application with hash routing
+- Single page application with browser routing
   - Compatible with hosting via Github Pages
 - Compiles TypeScript yet also allows Javascript
   - Allows transitioning existing .js(x) files
 - Linting for both TypeScript & Javascript
 - Automatic precommit linting and git message validation
 - Deployment to Github Pages on commit/PR merge to primary branch
-  - Workflow includes Codecov integration for coverage analysis
+  - Workflow includes [Codecov](https://codecov.io/) integration for coverage analysis
+  - Optional [RenovateBot](https://www.mend.io/renovate/) integration for automated dependency updates
   - Automatically writes date & time of deployment to HTML
 - Demo playground of example apps, with 100% unit-test coverage
   - Simple counter app using React state
@@ -39,7 +43,7 @@ Designed as a nifty React/Vite starter template with the following furnishings:
 ### Overview
 
 - ⚡️&nbsp; [Vite 6](https://vitejs.dev/)
-- ⚛️&nbsp; [React 18](https://beta.reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+- ⚛️&nbsp; [React 19](https://beta.reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
 - 🗄️&nbsp; [Redux](https://redux.js.org/) with [Redux Toolkit](https://redux-toolkit.js.org/)
 - 🧪&nbsp; [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - 🚀&nbsp; [GitHub Actions](https://docs.github.com/en/actions) with deployment on [GitHub Pages](https://pages.github.com/)
@@ -140,7 +144,8 @@ Build and test react app.
 Run [Codecov](https://about.codecov.io/) analysis.
 
 **Configuration**: <br>
-[Create a Codecov token](https://docs.codecov.com/docs/quick-start#step-2-get-the-repository-upload-token) for your repo and add it as a `CODECOV_TOKEN` secret in your repo under Secrets and variables > Actions > Repository secrets.
+- Create a [Codecov token](https://docs.codecov.com/docs/quick-start#step-2-get-the-repository-upload-token) for your repo 
+- Add the above token as a `CODECOV_TOKEN` secret in your repo, under Secrets and variables > Actions > Repository secrets.
 
 ![image](https://github.com/dcpesses/vite-react-ts-gh/assets/184237/bb9f7da1-8d90-455e-b131-43577842cc5e)
 
@@ -152,6 +157,7 @@ Deploy react app to GitHub Pages.
 
 **Configuration**: <br>
 - Replace `base` config in `vite.config.ts` to match your repo name
+- Replace `basename` attribute for `BrowserRouter` in `main.tsx` to match your repo name
 - Manual approve
   - If you want to keep it, you need to create a [new environment with manual approve](https://devblogs.microsoft.com/devops/i-need-manual-approvers-for-github-actions-and-i-got-them-now/) in your repo, and then replace `environment` config of `deploy` job in `.github/workflows/ci.yml`:
     - `environment.name` = name of the environment created in your repo
@@ -159,6 +165,23 @@ Deploy react app to GitHub Pages.
   - If your want to remove it, just delete the `environment` config section of the `deploy` job in `.github/workflows/ci.yml`
 
 Don't forget to [setup your repo](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) to deploy from your GitHub Pages branch. (Defaults to `gh-pages` unless `publish_branch` is specified in the `peaceiris/actions-gh-pages` config.)
+
+### Automated Dependency Updates
+
+> Runs on main branch
+
+[Renovate](https://www.mend.io/renovate/) creates pull requests for all types of dependency updates.
+
+Follow the instructions for [Installing and Onboarding](https://docs.renovatebot.com/getting-started/installing-onboarding/) the "Hosted GitHub.com App", aka [RenovateBot](https://github.com/renovatebot)
+
+Quick Guide:
+
+ - Add [Renovate App](https://github.com/marketplace/renovate) to your organization or personal account.
+ - Choose which repositories you want to scan.
+ - Each repo will receive a "Configure Renovate" PR; follow its instructions to activate or disable integration
+
+NOTE: Even though it's a free service, you may need to add a billing address to your GitHub account if none already exists.
+
 
 ## GitHub Pages
 
