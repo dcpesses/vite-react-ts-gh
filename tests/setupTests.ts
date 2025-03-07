@@ -9,7 +9,7 @@ import {
 } from './mockWindowLocation';
 
 beforeEach(() => {
-  mockWindowLocation('http://localhost:5173');
+  mockWindowLocation('http://localhost:5173/vite-react-ts-gh');
   mockWindowHistory();
 });
 

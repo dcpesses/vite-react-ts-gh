@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App > Should render as expected 1`] = `
+exports[`App > Should render Home route 1`] = `
 <div>
   <header
     class="App-header"
