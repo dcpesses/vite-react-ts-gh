@@ -3,7 +3,7 @@
 exports[`ReduxCounter > Should render and display state counter value 1`] = `
 <span
   aria-label="Counter value"
-  class="_value_503e3a"
+  class="_value_ca4d94"
 >
   0
 </span>
@@ -13,51 +13,51 @@ exports[`ReduxCounter > Should render as expected 1`] = `
 <div>
   <div>
     <div
-      class="_row_503e3a"
+      class="_row_ca4d94"
     >
       <button
         aria-label="Decrement value"
-        class="_button_503e3a"
+        class="_button_ca4d94"
       >
          - 
       </button>
       <span
         aria-label="Counter value"
-        class="_value_503e3a"
+        class="_value_ca4d94"
       >
         0
       </span>
       <button
         aria-label="Increment value"
-        class="_button_503e3a"
+        class="_button_ca4d94"
       >
          + 
       </button>
     </div>
     <div
-      class="_row_503e3a"
+      class="_row_ca4d94"
     >
       <input
         aria-label="Set increment amount"
-        class="_textbox_503e3a"
+        class="_textbox_ca4d94"
         value="2"
       />
       <button
         aria-label="Add increment amount"
-        class="_button_503e3a"
+        class="_button_ca4d94"
       >
         Add
       </button>
       <div>
         <button
           aria-label="Add async increment amount"
-          class="_asyncButton_503e3a"
+          class="_asyncButton_ca4d94"
         >
           Add Async
         </button>
         <button
           aria-label="Add increment amount if odd"
-          class="_button_503e3a"
+          class="_button_ca4d94"
         >
           Add If Odd
         </button>
