@@ -145,51 +145,51 @@ exports[`Demo > Should render as expected 1`] = `
           </h3>
           <div>
             <div
-              class="_row_503e3a"
+              class="_row_ca4d94"
             >
               <button
                 aria-label="Decrement value"
-                class="_button_503e3a"
+                class="_button_ca4d94"
               >
                  - 
               </button>
               <span
                 aria-label="Counter value"
-                class="_value_503e3a"
+                class="_value_ca4d94"
               >
                 0
               </span>
               <button
                 aria-label="Increment value"
-                class="_button_503e3a"
+                class="_button_ca4d94"
               >
                  + 
               </button>
             </div>
             <div
-              class="_row_503e3a"
+              class="_row_ca4d94"
             >
               <input
                 aria-label="Set increment amount"
-                class="_textbox_503e3a"
+                class="_textbox_ca4d94"
                 value="2"
               />
               <button
                 aria-label="Add increment amount"
-                class="_button_503e3a"
+                class="_button_ca4d94"
               >
                 Add
               </button>
               <div>
                 <button
                   aria-label="Add async increment amount"
-                  class="_asyncButton_503e3a"
+                  class="_asyncButton_ca4d94"
                 >
                   Add Async
                 </button>
                 <button
                   aria-label="Add increment amount if odd"
-                  class="_button_503e3a"
+                  class="_button_ca4d94"
                 >
                   Add If Odd
                 </button>
@@ -208,38 +208,38 @@ exports[`Demo > Should render as expected 1`] = `
           </h3>
           <div>
             <div
-              class="_row_e43be3"
+              class="_row_1843ce"
             >
               <button
                 aria-label="Decrement value"
-                class="_button_e43be3"
+                class="_button_1843ce"
               >
                  - 
               </button>
               <span
                 aria-label="Counter value"
-                class="_value_e43be3"
+                class="_value_1843ce"
               >
                 0
               </span>
               <button
                 aria-label="Increment value"
-                class="_button_e43be3"
+                class="_button_1843ce"
               >
                  + 
               </button>
             </div>
             <div
-              class="_row_e43be3"
+              class="_row_1843ce"
             >
               <input
                 aria-label="Set increment amount"
-                class="_textbox_e43be3"
+                class="_textbox_1843ce"
                 value="2"
               />
               <button
                 aria-label="Add increment amount"
-                class="_button_e43be3"
+                class="_button_1843ce"
               >
                 Add
               </button>
