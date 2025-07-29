@@ -42,7 +42,7 @@ Designed as a nifty React/Vite starter template with the following furnishings:
 
 ### Overview
 
-- ⚡️&nbsp; [Vite 6](https://vitejs.dev/)
+- ⚡️&nbsp; [Vite 7](https://vitejs.dev/)
 - ⚛️&nbsp; [React 19](https://beta.reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
 - 🗄️&nbsp; [Redux](https://redux.js.org/) with [Redux Toolkit](https://redux-toolkit.js.org/)
 - 🧪&nbsp; [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
