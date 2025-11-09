@@ -32,6 +32,15 @@ export default [...fixupConfigRules(compat.extends(
     globals: {
       ...globals.browser,
       ...globals.node,
+      afterAll: true,
+      afterEach: true,
+      beforeAll: true,
+      beforeEach: true,
+      describe: true,
+      expect: true,
+      it: true,
+      test: true,
+      vi: true,
     },
 
     parser: tsParser,

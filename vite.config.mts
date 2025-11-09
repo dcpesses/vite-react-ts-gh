@@ -1,4 +1,4 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
@@ -26,8 +26,8 @@ export default defineConfig({
     environment: 'happy-dom',
     setupFiles: 'tests/setupTests.ts',
     coverage: {
-      all: false,
       enabled: true,
+      include: ['src/**/*.{js,jsx,ts,tsx}'],
       provider: 'v8',
       reporter: ['html', 'lcovonly', 'text', 'text-summary'],
     },
