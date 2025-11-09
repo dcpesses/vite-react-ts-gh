@@ -31,7 +31,8 @@
     "test:watch": "vitest",
     "test:ci": "vitest run --coverage",
     "serve": "vite preview",
-    "prepare": "husky && rm -rf .git/hooks && ln -s ../.husky .git/hooks",
+    "prepare": "husky && rm -rf .git/hooks && test -d .git && ln -s ../.husky .git/hooks || npm run prepare:git-missing",
+    "prepare:git-missing": "tput bold && tput setaf 1 && echo \"Your project does not appear to use git for version control and may receive errors.\" && tput sgr0",
     "lint": "eslint --cache --fix ."
   },
   "dependencies": {
