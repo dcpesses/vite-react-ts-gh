@@ -1,6 +1,6 @@
 {
   "name": "vite-react-ts-gh",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React + Redux + TypeScript + Vite + Github Actions starter template",
   "repository": {
     "type": "git",
