@@ -1,5 +1,4 @@
 /* eslint-env jest */
-// import { vi } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import { getStoreWithState } from '../../app/store';
@@ -38,6 +37,23 @@ describe('Todos', () => {
     expect(listitem).toBeDefined();
   });
 
+  test('Should not add and display new todo list item when input field is empty', () => {
+    render(
+      <Provider store={store}>
+        <Todos />
+      </Provider>
+    );
+    const forminput = screen.getByPlaceholderText('Enter a Todo...', {selector: 'input'});
+    const button = screen.getByText('Add Todo');
+
+    expect(forminput).toHaveTextContent('');
+    fireEvent.change(forminput, {target: {value: ''}});
+    fireEvent.click(button);
+
+    const listitem = () => screen.getByText('', {selector: 'span'});
+    expect(listitem).toBeDefined();
+  });
+
   test('Should edit and update a todo list item', () => {
     render(
       <Provider store={store}>
@@ -55,6 +71,26 @@ describe('Todos', () => {
     fireEvent.click(updatebutton);
 
     const listitem = screen.queryByText('Howdy Doody', {selector: 'span'});
+    expect(listitem).toBeDefined();
+  });
+
+  test('Should not edit and update a todo list item when text field is empty', () => {
+    render(
+      <Provider store={store}>
+        <Todos />
+      </Provider>
+    );
+    const editbutton = screen.getAllByTitle('Edit')[0];
+    fireEvent.click(editbutton);
+
+    const forminput = screen.getByPlaceholderText('Edit Todo', {selector: 'input'});
+    expect(forminput.value).toBe(store.getState().todos[0].text);
+
+    fireEvent.change(forminput, {target: {value: ''}});
+    const updatebutton = screen.getByText('Edit', {selector: 'button'});
+    fireEvent.click(updatebutton);
+
+    const listitem = screen.queryByText(store.getState().todos[0].text, {selector: 'span'});
     expect(listitem).toBeDefined();
   });
 

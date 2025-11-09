@@ -35,13 +35,28 @@ describe('todos reducer', () => {
     expect(actual[0].text).toBe('Meet George');
   });
 
+  test('should handle deleteTodo without error when item does not exist', () => {
+    const actual = todosReducer(initialState, deleteTodo(12345));
+    expect(actual.length).toEqual(2);
+  });
+
   test('should handle editTodo', () => {
     const actual = todosReducer(initialState, editTodo({id: 1708982768968, text: 'Hit the library'}));
     expect(actual[0].text).toBe('Hit the library');
   });
 
+  test('should handle editTodo without error when item does not exist', () => {
+    const actual = todosReducer(initialState, editTodo({id: 12345, text: 'Hit the library'}));
+    expect(actual[0].text).toBe('Hit the gym');
+  });
+
   test('should handle toggleComplete', () => {
     const actual = todosReducer(initialState, toggleComplete(1708982768968));
     expect(actual[0].completed).toBeTruthy();
+  });
+
+  test('should handle toggleComplete without error when item does not exist', () => {
+    const actual = todosReducer(initialState, toggleComplete());
+    expect(actual[0].completed).toBeFalsy();
   });
 });
